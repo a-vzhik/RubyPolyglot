@@ -1,0 +1,25 @@
+<h1>Listing translates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @translates.each do |translate| %>
+      <tr>
+        <td><%= link_to 'Show', translate %></td>
+        <td><%= link_to 'Edit', edit_translate_path(translate) %></td>
+        <td><%= link_to 'Destroy', translate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Translate', new_translate_path %>

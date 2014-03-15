@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @translation_service.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @translation_service.url %>
+</p>
+
+<%= link_to 'Edit', edit_translation_service_path(@translation_service) %> |
+<%= link_to 'Back', translation_services_path %>

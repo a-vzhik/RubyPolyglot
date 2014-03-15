@@ -1,0 +1,29 @@
+<h1>Listing translation_services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @translation_services.each do |translation_service| %>
+      <tr>
+        <td><%= translation_service.name %></td>
+        <td><%= translation_service.url %></td>
+        <td><%= link_to 'Show', translation_service %></td>
+        <td><%= link_to 'Edit', edit_translation_service_path(translation_service) %></td>
+        <td><%= link_to 'Destroy', translation_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Translation service', new_translation_service_path %>

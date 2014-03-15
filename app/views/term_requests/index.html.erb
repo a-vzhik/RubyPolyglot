@@ -1,0 +1,29 @@
+<h1>Listing term_requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Datetime</th>
+      <th>Term</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @term_requests.each do |term_request| %>
+      <tr>
+        <td><%= term_request.datetime %></td>
+        <td><%= term_request.term %></td>
+        <td><%= link_to 'Show', term_request %></td>
+        <td><%= link_to 'Edit', edit_term_request_path(term_request) %></td>
+        <td><%= link_to 'Destroy', term_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Term request', new_term_request_path %>

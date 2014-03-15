@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @term_request.datetime %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @term_request.term %>
+</p>
+
+<%= link_to 'Edit', edit_term_request_path(@term_request) %> |
+<%= link_to 'Back', term_requests_path %>
